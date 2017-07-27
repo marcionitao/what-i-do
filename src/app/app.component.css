@@ -5,7 +5,7 @@ input#message {
     box-shadow:none;
     font-size:1.6em;
     font-weight:300;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     padding:1.2em .7em;
 }
 
@@ -18,15 +18,43 @@ input#message {
 
 #details-container p {
     background:#fff;
-    padding:1.4em;
+    padding:1em;
     color:#696969;
     margin: 12px;
     width:auto;
     min-width:200px;
 }
 
+#btn {
+    background:#008FEF;
+    color:white;
+    padding: 1.2em;
+    width:300px;
+    text-align:center;
+    font-size:1.2em;
+    margin-bottom: 30px;
+    cursor:pointer;
+}
+
+#btn-delete {
+   
+    width:20px;
+    text-align: center;
+    font-size:1em;
+    cursor:pointer;
+    width:auto;
+    min-width:200px;
+
+}
+
 img {
     display:block;
-    max-width: 50px;
+    max-width: 30px;
     margin-bottom:12px;
+}
+
+#title {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 30px;
+    color: grey;
 }

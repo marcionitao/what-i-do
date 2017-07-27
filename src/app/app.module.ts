@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 
 // here will set datas Firebase access
 export const firebaseConfig = {
- apiKey: "AIzaSyAnnRxyebngMfFVIgcDzGzW2_S5ReAD46c",
+    apiKey: "AIzaSyAnnRxyebngMfFVIgcDzGzW2_S5ReAD46c",
     authDomain: "what-i-do-6b1b3.firebaseapp.com",
     databaseURL: "https://what-i-do-6b1b3.firebaseio.com",
     projectId: "what-i-do-6b1b3",

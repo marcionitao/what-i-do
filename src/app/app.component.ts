@@ -22,11 +22,11 @@ export class AppComponent {
   msgVal: string = '';
 
   constructor(public afAuth: AngularFireAuth,
-              public af: AngularFireDatabase) {
+    public af: AngularFireDatabase) {
 
-      // and this.items grabs the list of entries from AngularFire.
-      // We're also limiting the messages to 50 with limitToLast.
-      this.items = af.list('/messages', {
+    // and this.items grabs the list of entries from AngularFire.
+    // We're also limiting the messages to 50 with limitToLast.
+    this.items = af.list('/messages', {
       query: {
         limitToLast: 50
       }
@@ -37,16 +37,18 @@ export class AppComponent {
   }
   // login method that will be called when a login button is clicked
   login() {
-      this.afAuth.auth.signInAnonymously();
+    this.afAuth.auth.signInAnonymously();
   }
   // Then we log the userout with the logout() method.
   logout() {
-      this.afAuth.auth.signOut();
+    this.afAuth.auth.signOut();
   }
   // Then we create a Send method when a user hits the enter key from a textfield. 
   Send(desc: string) {
-      this.items.push({ message: desc});
-      this.msgVal = '';
+    this.items.push({ message: desc });
+    this.msgVal = '';
   }
-
+  delete(item) {
+    this.items.remove(item);
+  }
 }
