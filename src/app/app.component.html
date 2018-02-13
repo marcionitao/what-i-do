@@ -8,7 +8,8 @@
   <input type="text" id="message" *ngIf="(user | async)?.uid" placeholder="What is it that you do?" (keyup.enter)="Send($event.target.value)" [(ngModel)]="msgVal" />
   <!--On the p tag we're using *ngFor to iterate through the list of items from the Firebase database. We're showing a pin.svg graphic and the message. -->
   <div id="details-container">
-      <p *ngFor="let item of items | async"><img src="https://s-media-cache-ak0.pinimg.com/originals/79/87/69/79876968d0232ae36a918226d94bcff1.gif"/>
+      <!--<p *ngFor="let item of items | async"><img src="https://s-media-cache-ak0.pinimg.com/originals/79/87/69/79876968d0232ae36a918226d94bcff1.gif"/>-->
+      <p *ngFor="let item of items | async"><img src="./assets/image/pin.svg"/>
         {{item.message}}
         <br><br>
         <button class="btn-danger" id="btn-delete" (click)="delete(item)">X</button>
